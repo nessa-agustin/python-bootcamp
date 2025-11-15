@@ -34,8 +34,9 @@ def show(inventory):
 
 def main():
     running = True
-    item_detail = str | int | float
-    inventory: list[dict[str, item_detail]] = []
+    # item_detail = str | int | float
+    # inventory: list[dict[str, item_detail]] = []
+    inventory = []
 
     while running:
         command = input("Command: ").strip().lower()
