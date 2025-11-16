@@ -3,3 +3,8 @@ def anagram(first: str, second: str) -> bool:
 
     Note: Listen and Silent are anagrams
     """
+    first = first.
+    second = second.sort()
+    print(first, second)
+
+anagram('silent', 'listen')

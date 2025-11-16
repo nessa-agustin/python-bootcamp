@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1 class="">Shopping List</h1>
+
+    <form method="post">
+        <input type="text" name="item" placeholder="Enter item" />
+        <button type="submit">Add</button>
+    </form>
+
+    <ol>
+        {% for item in shopping_list %}
+            <li>{{item}}</li>
+        {% endfor %}
+    </ol>
+
+
+{% endblock %}

@@ -1,8 +1,6 @@
 import requests
 import cProfile
-import cProfile
-
-import requests
+from concurrent.futures import ThreadPoolExecutor
 
 
 def check_website(url):
@@ -25,8 +23,10 @@ websites = websites[:100]
 
 
 def main():
-    for website in websites:
-        check_website(website)
+    # for website in websites:
+    #     check_website(website)
+    with ThreadPoolExecutor() as pool:
+        output = pool.map(check_website, websites)
 
 
 if __name__ == '__main__':
